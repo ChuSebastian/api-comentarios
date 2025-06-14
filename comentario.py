@@ -1,6 +1,7 @@
 import boto3
 import uuid
 import os
+import json
 
 def lambda_handler(event, context):
     # Entrada (json)
