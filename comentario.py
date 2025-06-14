@@ -5,9 +5,12 @@ import os
 def lambda_handler(event, context):
     # Entrada (json)
     print(event)
+
     tenant_id = event['body']['tenant_id']
     texto = event['body']['texto']
     nombre_tabla = os.environ["TABLE_NAME"]
+    bucket_ingesta = os.environ["BUCKET_INGESTA"]
+
     # Proceso
     uuidv1 = str(uuid.uuid1())
     comentario = {
